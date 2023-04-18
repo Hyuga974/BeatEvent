@@ -4,22 +4,24 @@ BeatEvent est une application de lecteur de musique collectif qui permet aux uti
 
 # Context
 
-Un café/bar/Restaurant souhaite organiser des évènements avec ses consommateurs afin de discuter et se rapprocher de ces derniers lors d'écoute partagé et en direct de divers musique sure des playlist pouvant être définit au préalables.
+Un Café/Bar/Restaurant souhaite organiser des évènements avec ses consommateurs afin de discuter et se rapprocher de ces derniers lors d'écoute partagé et en direct de divers musique sure des playlist pouvant être définit au préalables.
 
 # Fonctionnalités
 
-    Diffusion en direct de musique : Les utilisateurs peuvent écouter en direct la musique diffusée par l'hôte de l'événement.
+Diffusion en direct de musique : Les utilisateurs peuvent écouter en direct la musique diffusée par l'hôte de l'événement.
 
-    Tchat intégré : Les utilisateurs peuvent discuter en temps réel avec les autres participants à l'événement grâce au tchat intégré.
+Tchat intégré : Les utilisateurs peuvent discuter en temps réel avec les autres participants à l'événement grâce au tchat intégré.
 
-    Partage de playlist : Les utilisateurs peuvent partager leur playlist avec les autres participants à l'événement.
+Partage de playlist : Les utilisateurs peuvent partager leur playlist avec les autres participants à l'événement.
 
 # Installation
 
 Pour utiliser BeatEvent, vous aurez besoin de Python 3 et de la bibliothèque Tkinter. Vous pouvez installer la bibliothèque Tkinter en exécutant la commande suivante :
 
 ```shell
-$ sudo apt-get install python3-tk
+$ sudo dnf install python3
+$ sudo dnf install python3-pip
+$ pip install tk
 ``` 
 
 Ensuite, vous pouvez cloner le dépôt Git de BeatEvent en utilisant la commande suivante :
@@ -43,4 +45,4 @@ Projet réalisé par :
 
 # Licence
 
-BeatEvent est sous licence MIT. Voir le fichier LICENSE pour plus de détails.
+BeatEvent est sous licence MIT. Voir le fichier [License](LICENSE) pour plus de détails.
