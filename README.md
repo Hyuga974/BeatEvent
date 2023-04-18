@@ -36,12 +36,12 @@ $ git clone https://github.com/Hyuga974/BeatEvent.git
 # Contributeurs
 
 Projet réalisé par :
-- DAUTREMENT Valentin - valentin-dlack
-- FERREIRA Matteo - Mattox0
-- GARCIA Fabio - Fgarcia584
-- HERAUD Sandra - Kaly-SH
-- MOURGUES Maxime - Maximauve
-- REYPE Costa - Hyuga974
+- DAUTREMENT Valentin - [valentin-dlack](https://github.com/valentin-dlack)
+- FERREIRA Matteo - [Mattox0](https://github.com/mattox0)
+- GARCIA Fabio - [Fgarcia584](https://github.com/Fgarcia584)
+- HERAUD Sandra - [Kaly-SH](https://github.com/Kaly-SH)
+- MOURGUES Maxime - [Maximauve](https://github.com/Maximauve)
+- REYPE Costa - [Hyuga974](https://github.com/Hyuga974)
 
 # Licence
 
