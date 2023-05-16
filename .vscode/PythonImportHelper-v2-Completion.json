@@ -1,0 +1,118 @@
+[
+    {
+        "label": "tkinter",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "customtkinter",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "customtkinter",
+        "description": "customtkinter",
+        "detail": "customtkinter",
+        "documentation": {}
+    },
+    {
+        "label": "Navbar",
+        "importPath": "Nav",
+        "description": "Nav",
+        "isExtraImport": true,
+        "detail": "Nav",
+        "documentation": {}
+    },
+    {
+        "label": "play_song_frame",
+        "kind": 5,
+        "importPath": "src.main",
+        "description": "src.main",
+        "peekOfCode": "play_song_frame = tk.Frame( bg=\"white\")\nplay_song_frame.pack(fill=tk.X, pady=10, padx=30)\n# Ajout de la barre de play song\nplay_song_label = tk.Label(play_song_frame, text=\"Nom de la musique\", bg=\"white\")\nplay_song_label.pack(side=tk.LEFT, padx=10, pady=10)\n# Tchat\nchat_frame = tk.Frame( bg=\"white\", width=200, height=200)\nchat_frame.pack(side=tk.RIGHT, anchor=tk.SE, padx=10, pady=10)\nchat_frame.pack_propagate(0)\nchat_label = tk.Label(chat_frame, text=\"Live Chat\")",
+        "detail": "src.main",
+        "documentation": {}
+    },
+    {
+        "label": "play_song_label",
+        "kind": 5,
+        "importPath": "src.main",
+        "description": "src.main",
+        "peekOfCode": "play_song_label = tk.Label(play_song_frame, text=\"Nom de la musique\", bg=\"white\")\nplay_song_label.pack(side=tk.LEFT, padx=10, pady=10)\n# Tchat\nchat_frame = tk.Frame( bg=\"white\", width=200, height=200)\nchat_frame.pack(side=tk.RIGHT, anchor=tk.SE, padx=10, pady=10)\nchat_frame.pack_propagate(0)\nchat_label = tk.Label(chat_frame, text=\"Live Chat\")\nchat_label.pack(padx=10, pady=10)\n# Next songs\nupcoming_songs_frame = tk.Frame( bg=\"white\", width=200, height=200)",
+        "detail": "src.main",
+        "documentation": {}
+    },
+    {
+        "label": "chat_frame",
+        "kind": 5,
+        "importPath": "src.main",
+        "description": "src.main",
+        "peekOfCode": "chat_frame = tk.Frame( bg=\"white\", width=200, height=200)\nchat_frame.pack(side=tk.RIGHT, anchor=tk.SE, padx=10, pady=10)\nchat_frame.pack_propagate(0)\nchat_label = tk.Label(chat_frame, text=\"Live Chat\")\nchat_label.pack(padx=10, pady=10)\n# Next songs\nupcoming_songs_frame = tk.Frame( bg=\"white\", width=200, height=200)\nupcoming_songs_frame.pack(side=tk.LEFT, anchor=tk.SW, padx=10, pady=10)\nupcoming_songs_frame.pack_propagate(0)\nupcoming_songs_frame = tk.Label(upcoming_songs_frame, text=\"Next sounds \")",
+        "detail": "src.main",
+        "documentation": {}
+    },
+    {
+        "label": "chat_label",
+        "kind": 5,
+        "importPath": "src.main",
+        "description": "src.main",
+        "peekOfCode": "chat_label = tk.Label(chat_frame, text=\"Live Chat\")\nchat_label.pack(padx=10, pady=10)\n# Next songs\nupcoming_songs_frame = tk.Frame( bg=\"white\", width=200, height=200)\nupcoming_songs_frame.pack(side=tk.LEFT, anchor=tk.SW, padx=10, pady=10)\nupcoming_songs_frame.pack_propagate(0)\nupcoming_songs_frame = tk.Label(upcoming_songs_frame, text=\"Next sounds \")\nupcoming_songs_frame.pack(padx=10, pady=10)\nwindow.title('BeatEvent')\nwindow.mainloop()",
+        "detail": "src.main",
+        "documentation": {}
+    },
+    {
+        "label": "upcoming_songs_frame",
+        "kind": 5,
+        "importPath": "src.main",
+        "description": "src.main",
+        "peekOfCode": "upcoming_songs_frame = tk.Frame( bg=\"white\", width=200, height=200)\nupcoming_songs_frame.pack(side=tk.LEFT, anchor=tk.SW, padx=10, pady=10)\nupcoming_songs_frame.pack_propagate(0)\nupcoming_songs_frame = tk.Label(upcoming_songs_frame, text=\"Next sounds \")\nupcoming_songs_frame.pack(padx=10, pady=10)\nwindow.title('BeatEvent')\nwindow.mainloop()",
+        "detail": "src.main",
+        "documentation": {}
+    },
+    {
+        "label": "upcoming_songs_frame",
+        "kind": 5,
+        "importPath": "src.main",
+        "description": "src.main",
+        "peekOfCode": "upcoming_songs_frame = tk.Label(upcoming_songs_frame, text=\"Next sounds \")\nupcoming_songs_frame.pack(padx=10, pady=10)\nwindow.title('BeatEvent')\nwindow.mainloop()",
+        "detail": "src.main",
+        "documentation": {}
+    },
+    {
+        "label": "Navbar",
+        "kind": 6,
+        "importPath": "src.Nav",
+        "description": "src.Nav",
+        "peekOfCode": "class Navbar(ctk.CTkFrame):\n    def __init__(self, master=None):\n        super().__init__(master, bg_color=\"gray20\", width=200)\n        self.master = master\n        self.create_widgets()\n    def create_widgets(self):\n        self.navigation_frame = ctk.CTkFrame(self, corner_radius=0)\n        self.navigation_frame.pack(side=\"top\", fill=\"x\")\n        self.navigation_frame_label = ctk.CTkLabel(self.navigation_frame, text=\"Navigation\",\n                                                    compound=\"left\", font=ctk.CTkFont(size=15, weight=\"bold\"), fg_color=\"white\")",
+        "detail": "src.Nav",
+        "documentation": {}
+    },
+    {
+        "label": "button_function",
+        "kind": 2,
+        "importPath": "src.ex",
+        "description": "src.ex",
+        "peekOfCode": "def button_function():\n    print(\"button pressed\")\n# Use CTkButton instead of tkinter Button\nbutton = customtkinter.CTkButton(master=app, text=\"CTkButton\", command=button_function)\nbutton.place(relx=0.5, rely=0.5, anchor=tkinter.CENTER)\napp.mainloop()",
+        "detail": "src.ex",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "src.ex",
+        "description": "src.ex",
+        "peekOfCode": "app = customtkinter.CTk()  # create CTk window like you do with the Tk window\napp.geometry(\"400x240\")\ndef button_function():\n    print(\"button pressed\")\n# Use CTkButton instead of tkinter Button\nbutton = customtkinter.CTkButton(master=app, text=\"CTkButton\", command=button_function)\nbutton.place(relx=0.5, rely=0.5, anchor=tkinter.CENTER)\napp.mainloop()",
+        "detail": "src.ex",
+        "documentation": {}
+    },
+    {
+        "label": "button",
+        "kind": 5,
+        "importPath": "src.ex",
+        "description": "src.ex",
+        "peekOfCode": "button = customtkinter.CTkButton(master=app, text=\"CTkButton\", command=button_function)\nbutton.place(relx=0.5, rely=0.5, anchor=tkinter.CENTER)\napp.mainloop()",
+        "detail": "src.ex",
+        "documentation": {}
+    }
+]
