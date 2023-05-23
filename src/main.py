@@ -63,12 +63,12 @@ def fillWindow():
     play_song_label.pack(side=tk.LEFT, padx=10, pady=10)
     
     # tchat     
-    chat_frame = tk.Frame(width= window.winfo_width(), height=400)
-    chat_frame.pack(side=tk.RIGHT, anchor=tk.SE, padx=30, pady=10)
-    chat_frame.pack_propagate(0)
-    chat_label = tk.Label(chat_frame, text="Live Chat")
+    # chat_frame = tk.Frame(width= window.winfo_width(), height=400)
+    # chat_frame.pack(side=tk.RIGHT, anchor=tk.SE, padx=30, pady=10)
+    # chat_frame.pack_propagate(0)
+    # chat_label = tk.Label(chat_frame, text="Live Chat")
     
-    chat_label.pack(padx=window.winfo_width()/100, pady=10)
+    # chat_label.pack(padx=window.winfo_width()/100, pady=10)
 
 
     # Next songs
@@ -113,7 +113,7 @@ def tchat_area():
     
 
 window.after(100, fillWindow())
-# window.after(100, tchat_area())
+window.after(100, tchat_area())
 window.mainloop()
 
 
