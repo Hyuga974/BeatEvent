@@ -31,7 +31,10 @@ $ git clone https://github.com/Hyuga974/BeatEvent.git
 ```
 
 # Utilisation
-
+```
+py ./tchatServer.py
+py ./main.py
+```
 
 # Contributeurs
 
