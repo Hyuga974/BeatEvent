@@ -1,9 +1,21 @@
 import tkinter as tk
 import customtkinter as ctk
 from Nav import Navbar
+from socket import *
+from threading import *
+from tkinter import *
 
 ctk.set_appearance_mode("System")  # Modes: system (default), light, dark
 ctk.set_default_color_theme("blue")  # Themes: blue (default), dark-blue, green
+
+clientSocket = socket(AF_INET, SOCK_STREAM)
+clientSocket.setsockopt(SOL_SOCKET, SO_REUSEADDR, 1)
+
+hostIp = "127.0.0.1"
+portNumber = 7500
+
+clientSocket.connect((hostIp, portNumber))
+
 
 def get_window_size():
     window.update()
@@ -50,12 +62,6 @@ def fillWindow():
 
     play_song_label.pack(side=tk.LEFT, padx=10, pady=10)
 
-    # Tchat
-    chat_frame = tk.Frame( bg="white", width= window.winfo_width(), height=400)
-    chat_frame.pack(side=tk.RIGHT, anchor=tk.SE, padx=30, pady=10)
-    chat_frame.pack_propagate(0)
-    chat_label = tk.Label(chat_frame, text="Live Chat")
-    chat_label.pack(padx=window.winfo_width()/100, pady=10)
 
     # Next songs
     upcoming_songs_frame = tk.Frame( bg="white", width=window.winfo_width(), height=400)
@@ -66,7 +72,40 @@ def fillWindow():
 
 window.title('BeatEvent')
 
+def tchat_area():
+    chat_frame = tk.Frame(width= window.winfo_width(), height=400)
+    chat_frame.pack(side=tk.RIGHT, anchor=tk.SE, padx=30, pady=10)
+    chat_frame.pack_propagate(0)
+    chat_label = tk.Label(chat_frame, text="Live Chat")
+    txtMessages = Text(chat_frame, width=50)
+    txtMessages.grid(row=0, column=0, padx=10, pady=10)
+
+    txtYourMessage = Entry(chat_frame, width=50)
+    txtYourMessage.insert(0,"Your message")
+    txtYourMessage.grid(row=1, column=0, padx=10, pady=10)
+
+    def sendMessage():
+        clientMessage = txtYourMessage.get()
+        txtMessages.insert(END, "\n" + "You: "+ clientMessage)
+        clientSocket.send(clientMessage.encode("utf-8"))
+
+    btnSendMessage = Button(chat_frame, text="Send", width=20, command=sendMessage)
+    btnSendMessage.grid(row=2, column=0, padx=10, pady=10)
+    chat_label.pack(padx=window.winfo_width()/100, pady=10)
+    
+    def recvMessage():
+        while True:
+            serverMessage = clientSocket.recv(1024).decode("utf-8")
+            print(serverMessage)
+            txtMessages.insert(END, "\n"+serverMessage)
+    
+    recvThread = Thread(target=recvMessage)
+    recvThread.daemon = True
+    recvThread.start()
+    
+
 window.after(100, fillWindow())
+window.after(200, tchat_area())
 window.mainloop()
 
 
